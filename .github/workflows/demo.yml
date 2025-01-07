@@ -10,7 +10,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with: 
           path: ~/.npm   # Store deps in the github cloud for subsequent uses in other steps or workflows
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }} # whenever package-lock changes -> remove this cache and recreate new one
@@ -29,7 +29,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with: 
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
