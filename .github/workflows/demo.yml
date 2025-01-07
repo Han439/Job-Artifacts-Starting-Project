@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get build artifact
-        uses: actions/download-artifact
+        uses: actions/download-artifact@v4
         with:
           name: dist-file # Download and unzip the dist-file above
       - name: Output contents
